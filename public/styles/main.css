@@ -1,0 +1,196 @@
+
+/* all */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+
+:root {
+--main-blue: #71b7e6;
+--main-purple: #9b59b6;
+--main-grey: #ccc;
+--sub-grey: #d9d9d9;
+}
+
+body {
+display: flex;
+height: 100vh;
+justify-content: center; /*center vertically */
+align-items: center; /* center horizontally */
+background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+padding: 10px;
+}
+/* container and form */
+.container {
+max-width: 700px;
+width: 100%;
+background: #fff;
+padding: 25px 30px;
+border-radius: 5px;
+}
+.container .title {
+font-size: 25px;
+font-weight: 500;
+position: relative;
+}
+
+.container .title::before {
+content: "";
+position: absolute;
+height: 3.5px;
+width: 30px;
+background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+left: 0;
+bottom: 0;
+}
+
+.container form .user__details {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 20px 0 12px 0;
+}
+/* inside the form user details */
+form .user__details .input__box {
+width: calc(100% / 2 - 20px);
+margin-bottom: 15px;
+}
+
+.user__details .input__box .details {
+font-weight: 500;
+margin-bottom: 5px;
+display: block;
+}
+.user__details .input__box input {
+height: 45px;
+width: 100%;
+outline: none;
+border-radius: 5px;
+border: 1px solid var(--main-grey);
+padding-left: 15px;
+font-size: 16px;
+border-bottom-width: 2px;
+transition: all 0.3s ease;
+}
+
+.user__details .input__box input:focus,
+.user__details .input__box input:valid {
+border-color: var(--main-purple);
+}
+
+/* inside the form gender details */
+
+form .gender__details .gender__title {
+font-size: 20px;
+font-weight: 500;
+}
+
+form .gender__details .category {
+display: flex;
+width: 80%;
+margin: 15px 0;
+justify-content: space-between;
+}
+
+.gender__details .category label {
+display: flex;
+align-items: center;
+}
+
+.gender__details .category .dot {
+height: 18px;
+width: 18px;
+background: var(--sub-grey);
+border-radius: 50%;
+margin: 10px;
+border: 5px solid transparent;
+transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category .one,
+#dot-2:checked ~ .category .two,
+#dot-3:checked ~ .category .three {
+border-color: var(--sub-grey);
+background: var(--main-purple);
+}
+
+form input[type="radio"] {
+display: none;
+}
+
+/* submit button */
+form .button {
+height: 45px;
+margin: 45px 0;
+}
+
+form .button input {
+height: 100%;
+width: 100%;
+outline: none;
+color: #fff;
+border: none;
+font-size: 18px;
+font-weight: 500;
+border-radius: 5px;
+background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+transition: all 0.3s ease;
+}
+
+form .button input:hover {
+background: linear-gradient(-135deg, var(--main-blue), var(--main-purple));
+}
+
+
+
+/* CSS for button*/
+.button-25 {
+background-color: #36A9AE;
+background-image: linear-gradient(#37ADB2, #329CA0);
+border: 1px solid #2A8387;
+border-radius: 4px;
+box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+color: #FFFFFF;
+cursor: pointer;
+display: block;
+font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 17px;
+line-height: 100%;
+margin: 0;
+outline: 0;
+padding: 11px 15px 12px;
+text-align: center;
+transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+width: 100%;
+}
+
+.button-25:hover {
+box-shadow: rgba(255, 255, 255, 0.3) 0 0 2px inset, rgba(0, 0, 0, 0.4) 0 1px 2px;
+text-decoration: none;
+transition-duration: .15s, .15s;
+}
+
+.button-25:active {
+box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+}
+
+.button-25:disabled {
+cursor: not-allowed;
+opacity: .6;
+}
+
+.button-25:disabled:active {
+pointer-events: none;
+}
+
+.button-25:disabled:hover {
+box-shadow: none;
+}
+
